@@ -1,3 +1,4 @@
+//import functions needed
 import { Walkers } from "./Walkers.js"
 import { CityList } from "./CityList.js"
 import { Assignments } from "./Assignments.js"
@@ -21,10 +22,9 @@ const applicationHTML = `
         ${RegisteredPets()}
     </section>
 </article>
-
 <article class="assignments">
     <h2>Current Assignments</h2>
-    ${Assignments()}
+        ${Assignments()}
 </article>
 `
 

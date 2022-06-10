@@ -1,17 +1,20 @@
-import { getWalkers } from "./database.js"
+//import getcities() from database.js
+import { getCities } from "./database.js";
+//set to cities var
+const cities = getCities()
 
-const walkers = getWalkers()
-
-
+//export new func CityList 
 export const CityList = () => {
-    let citiesHTML = "<ol>"
-
-    for (const walker of walkers) {
-        citiesHTML += `<li>${walker.city}</li>`
+    // let citiesHTML to hold city string info wrapped in <ul>''</ul>  
+    let citiesHTML = "<ul>"
+    //iterate through cities 
+    for (const city of cities) {
+        // add each city.name to my citiesHTML string wrapped between <li>""</li>
+        citiesHTML += `<li>${city.name}</li>`
     }
-
-    citiesHTML += "</ol>"
-
+    //complete wrap of my new string with ending </ul>
+    citiesHTML += "</ul>"
+    //return entire string
     return citiesHTML
 }
 
